@@ -6,7 +6,7 @@ A FREE Ansible course that takes you step-by-step through building a custom Ansi
 ## Lesson 1: Ansible For Everyone (Part 1: In The Beginning There Was Manual...)
 This tutorial will introduce Ansible and set-up or development environment.
 
--> Click [HERE]() to read the article on LinkedIn.
+-> Click [HERE](https://www.linkedin.com/pulse/lesson-1-ansible-everyone-part-beginning-manual-kevin-thomas/) to read the article on LinkedIn.
 
 ## Lesson 2: COMING SOON!
 
