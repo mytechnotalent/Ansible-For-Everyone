@@ -3,8 +3,8 @@
 # Ansible For Everyone
 A FREE Ansible course that takes you step-by-step through building a custom Ansible Framework from scratch.
 
-## Lesson 1: MicroPython For micro:bit (Part 1: Basic I/O)
-This tutorial will discuss MicroPython basic input and output for the micro:bit V2.
+## Lesson 1: Ansible For Everyone (Part 1: In The Beginning There Was Manual...)
+This tutorial will introduce Ansible and set-up or development environment.
 
 -> Click [HERE]() to read the article on LinkedIn.
 
