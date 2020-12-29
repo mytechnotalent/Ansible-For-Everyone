@@ -18,7 +18,12 @@ This tutorial will discuss Ansible Playbooks.
 
 -> Click [HERE](https://www.linkedin.com/pulse/ansible-everyone-part-3-playbooks-kevin-thomas/) to read the article on LinkedIn.
 
-## Lesson 4: COMING SOON!
+## Lesson 4: Ansible For Everyone (Part 4: Ansible Variables, Facts & Task Control)
+This tutorial will discuss Ansible variables, facts & task control.
+
+-> Click [HERE](https://www.linkedin.com/pulse/ansible-everyone-part-4-variables-facts-task-control-kevin-thomas/) to read the article on LinkedIn.
+
+## Lesson 5: COMING SOON!
 
 ## License
 [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
