@@ -31,7 +31,7 @@ This tutorial will discuss Ansible files.
 ## Lesson 6: Ansible For Everyone (Part 6: Custom Automation Framework)
 This tutorial will discuss creating a very basic custom Automation Framework.
 
--> Click [HERE]() to read the article on LinkedIn.
+-> Click [HERE](https://www.linkedin.com/pulse/ansible-everyone-part-6-custom-automation-framework-kevin-thomas/) to read the article on LinkedIn.
 
 ## Lesson 7: Ansible For Everyone (Part 7: Custom Module Development)
 This tutorial will discuss creating a custom module.
