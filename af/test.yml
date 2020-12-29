@@ -1,0 +1,28 @@
+---
+- name: Obtain information from the managed hosts
+  hosts: all
+  tasks:
+  
+  - name: Obtain directory information
+    block:
+
+    - name: List files
+      command: 'ls'
+      register: ls
+      changed_when: false
+
+    - name: Display files
+      debug:
+        var: ls
+
+    always:
+
+    - name: Get OS version information
+      command: 'cat /etc/os-release'
+      become: yes
+      register: os_info
+      changed_when: false
+
+    - name: Display OS version information
+      debug:
+        var: os_info

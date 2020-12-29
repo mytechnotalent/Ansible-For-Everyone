@@ -1,0 +1,11 @@
+---
+- name: Obtain data for framework
+  hosts: all
+  tasks:
+  
+  - name: Get host_vars
+    block:
+
+    - name: Display host_vars
+      debug: 
+        msg: My name is {{ name }} and my occupation is {{ occupation }}. 

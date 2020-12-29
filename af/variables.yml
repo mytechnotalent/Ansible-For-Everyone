@@ -1,0 +1,18 @@
+---
+- name: Web connection and informational verification
+  hosts: all
+  vars:
+    site: 'https://google.com'
+  tasks:
+  
+  - name: Obtain info from targeted sites
+    block:
+
+    - name: Get data from google.com
+      uri:
+        url: '{{ site }}'
+      register: google_info
+
+    - name: Display data from google.com
+      debug:
+        var: google_info

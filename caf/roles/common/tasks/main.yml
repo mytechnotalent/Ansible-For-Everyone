@@ -1,0 +1,6 @@
+---
+- include: site_list_verification.yml
+  tags: [ always, site_list_verification ]
+
+- include: site_info_gathering.yml
+  tags: site_info_gathering

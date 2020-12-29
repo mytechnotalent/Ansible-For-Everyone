@@ -1,5 +1,5 @@
 [my_host_group]
 client-0x0001
 
-[my_vars]
+[common]
 client-0x0001

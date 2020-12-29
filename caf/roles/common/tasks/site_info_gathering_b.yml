@@ -1,0 +1,38 @@
+---
+- name: Gather site info
+  block:
+
+  - name: Query site
+    uri: 
+      url: '{{ sites }}'
+    register: sites
+
+  - name: Verify site has OK status
+    debug: 
+      msg: echo site OK STATUS
+    when: "{{ item }}".status == 200
+      loop: sites
+
+  - name: Verify site has expires in cookie
+    debug:
+      msg: echo site cookie has expiration date
+    when: '"expires" in {{ item }}.set_cookie' 
+      loop: sites
+
+  - name: Verify site redirected and has chunked transfer encoding
+    debug: 
+      msg: echo site did successfully redirect and has chunked transfer encoding
+    when:
+      - {{ item }}.redirected == true
+      - {{ item }}.transfer_encoding == 'chunked'
+      loop: sites
+
+  - name: Verify site server is gws or expires is -1
+    debug:
+      msg: echo site either has gws as its server and OK status or a -1 expires value
+    when: >
+      ( {{ item }}.server == 'gws' and 
+        {{ item }}.status == 200 )
+      or
+        {{ item }}.expires == '-1'
+      loop: sites

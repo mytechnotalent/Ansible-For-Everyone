@@ -1,0 +1,17 @@
+---
+- name: Verify critical files and directories exist
+  hosts: all
+  tasks:
+  
+  - name: Check directories
+    block:
+
+    - name: Ensure the Downloads directory exists
+      command: ls -lhrt
+      ignore_errors: yes
+      register: directory_result
+      failed_when: '"Downloads" not in directory_result.stdout'
+      changed_when: false
+    - name: Debug the value
+      debug:
+        var: directory_result

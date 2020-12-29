@@ -1,0 +1,38 @@
+---
+- name: Check various website connectivity
+  hosts: all
+  tasks:
+  
+  - name: Check status for google.com
+    block:
+
+    - name: Query google.com
+      uri: 
+        url: 'https://google.com'
+      register: google_info
+
+    - name: Verify google.com has OK status
+      debug: 
+        msg: google.com OK STATUS
+      when: google_info.status == 200
+
+    - name: Verify google.com has expires in cookie
+      debug:
+        msg: google.com cookie has expiration date
+      when: '"expires" in google_info.set_cookie' 
+
+    - name: Verify google.com redirected and has chunked transfer encoding
+      debug: 
+        msg: google.com did successfully redirect and has chunked transfer encoding
+      when:
+        - google_info.redirected == true
+        - google_info.transfer_encoding == 'chunked'
+
+    - name: Verify google.com server is gws or expires is -1
+      debug:
+        msg: google.com either has gws as its server and OK status or a -1 expires value
+      when: >
+        ( google_info.server == 'gws' and 
+          google_info.status == 200 )
+        or
+          google_info.expires == '-1'

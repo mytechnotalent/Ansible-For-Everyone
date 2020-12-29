@@ -1,0 +1,19 @@
+---
+- name: Verify names are within framework
+  hosts: all
+  vars:
+    names:
+    - Joe
+    - Jack
+    - Sally
+    - Sarah
+    - Jen
+  tasks:
+  
+  - name: Iterate names
+    block:
+
+    - name: Get names
+      debug: 
+        msg: My name is {{ item }}.
+      loop: '{{ names }}'

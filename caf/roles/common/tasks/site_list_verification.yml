@@ -1,0 +1,9 @@
+---
+- name: Obtain site list verification
+  block:
+
+    - name: Display site list verification
+      debug: 
+        msg: 'Site:  "{{ item }}"' 
+      loop: 
+        - '{{ sites }}'

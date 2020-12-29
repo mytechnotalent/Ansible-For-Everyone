@@ -1,0 +1,22 @@
+---
+- name: Obtain information from the managed hosts
+  hosts: all
+  tasks:
+  
+  - name: Obtain directory information
+    block:
+
+    - name: Review non-existant file
+      command: 'cat foo'
+      changed_when: false
+
+    rescue:
+      - name: Failure occurred
+        shell: date
+        notify: Create foo
+
+  handlers:
+    - name: Create foo 
+      file:
+        path: 'foo'
+        state: touch

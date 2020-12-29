@@ -1,0 +1,12 @@
+---
+- name: Gather network information from managed hosts
+  hosts: all
+  tasks:
+  
+  - name: Obtain basic networking info
+    block:
+
+    - name: Print IP address
+      debug: 
+        msg: > 
+          This host uses IP address {{ ansible_facts.default_ipv4.address }} as it's address.

@@ -1,0 +1,31 @@
+---
+- name: Update configuration on the managed hosts
+  hosts: all
+  vars:
+    config_val_1: '"updated_config_val_1"'
+  tasks:
+  
+  - name: Update or create my_config.json if not exists
+    block:
+
+    - name: Update my_config.json
+      template:
+        src: 'templates/my_config.j2'
+        dest: 'my_config.json'
+      
+    rescue: 
+      - name: Failure occured
+        shell: date
+        notify: Create my_config.json
+
+  handlers:
+
+    - name: Create my_config.json
+      file:
+        path: 'my_config.json'
+        state: touch
+
+    - name: Update my_config.json
+      template:
+        src: 'templates/my_config.j2'
+        dest: 'my_config.json'
