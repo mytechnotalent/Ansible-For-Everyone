@@ -1,7 +1,7 @@
 ![image](https://github.com/mytechnotalent/Ansible-For-Everyone/blob/main/Ansible%20For%20Everyone.png?raw=true)
 
 # Ansible For Everyone
-A FREE Ansible course that takes you step-by-step through building a custom Ansible Framework from scratch.
+A FREE course that takes you step-by-step through building a custom Automation Ansible Framework from scratch.
 
 ## Lesson 1: Ansible For Everyone (Part 1: In The Beginning There Was Manual...)
 This tutorial will introduce Ansible and set-up or development environment.
