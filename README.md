@@ -41,5 +41,6 @@ This tutorial will discuss creating a custom module.
 -> Click [HERE](https://www.linkedin.com/pulse/ansible-everyone-part-7-custom-module-development-kevin-thomas) to read the article on LinkedIn.
 
 <br>
+
 # License
 [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
